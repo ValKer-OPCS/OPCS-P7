@@ -16,16 +16,39 @@
 .text_container {
     display: flex;
     position: absolute;
-    top: 78px;
-    right: 273px;
+    top: clamp(30px, 5.5vw, 78px);
+    left: clamp(16px, 19vw, 273px);
 
     p {
       color: #FFF;
       text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
       font-family: Montserrat;
-      font-size: 48px;
+      font-size: clamp(24px, 3.3vw, 48px);
       font-weight: 700;
       line-height: 142.6%;
     }
 
+  }
+
+  @media (max-width: 375px) {
+    .cards_container {
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .text_container {
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0;
+      top: 20px;
+      left: 16px;
+
+      p {
+        font-size: 24px;
+        text-shadow: none;
+      }
+    }
   }
