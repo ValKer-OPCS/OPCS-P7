@@ -6,7 +6,6 @@ import homeBannerImg from '../../Assets/homeBanner.png'
 
 import Banner from '../../Component/Banner/Banner.jsx'
 import Card from '../../Component/Card/Card.jsx'
-import Footer from '../../Layout/Footer/Footer.jsx'
 
 
 const Home = () => {
@@ -35,7 +34,7 @@ const Home = () => {
           </Link>
         ))}
       </div>
-      <Footer />
+      
     </main>
   )
 }
