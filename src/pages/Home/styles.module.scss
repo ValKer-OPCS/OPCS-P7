@@ -1,0 +1,31 @@
+.cards_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1140px;
+  gap : 60px;
+  row-gap: 50px;
+
+  background-color: #f6f6f6;
+  margin: 0 100px;
+  padding: 56px 50px 43px 50px;
+  border-radius: 25px;
+}
+
+
+.text_container {
+    display: flex;
+    position: absolute;
+    top: 78px;
+    right: 273px;
+
+    p {
+      color: #FFF;
+      text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+      font-family: Montserrat;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 142.6%;
+    }
+
+  }
