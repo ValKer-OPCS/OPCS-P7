@@ -23,8 +23,8 @@ const Home = () => {
     <main>
       <Banner image={homeBannerImg} imageAlt={'Banniere du site'}>
         <div className={styles.text_container}>
-          <p>Chez vous,</p>
-          <p>&nbsp; partout et ailleurs</p>
+          <p>Chez vous,&nbsp;</p>
+          <p> partout et ailleurs</p>
         </div>
       </Banner>
       <div className={styles.cards_container}>

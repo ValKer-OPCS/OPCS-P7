@@ -1,6 +1,6 @@
     .card {
-        height: 340px;
-        width: 340px;
+        width: clamp(335px, 53.97vw, 340px); // reste 340px jusqu'à 630px
+  height: clamp(255px, 53.97vw, 340px);
         margin: 0;
         position: relative;
         border-radius: 10px;
@@ -26,5 +26,12 @@
             align-items: flex-end;
             padding: 20px;
 
+        }
+    }
+
+    @media (max-width: 375px) {
+        .card {
+            width: 335px;
+            height: 255px;
         }
     }
