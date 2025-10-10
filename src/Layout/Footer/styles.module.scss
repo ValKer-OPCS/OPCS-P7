@@ -12,6 +12,7 @@
         gap: 28.5px;
         justify-content: center;
         align-items: center;
+
         img {
             height: 40px;
             width: 122px;
@@ -27,5 +28,26 @@
         font-size: 24px;
         font-weight: 500;
         line-height: 142.6%;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer {
+        height: 210px;
+        padding: 0;
+
+        &__container {
+            gap: 20px;
+
+            img {
+                height: 40px;
+                width: 122px;
+            }
+        }
+
+        p {
+            width: 133px;
+            font-size: 12px;
+        }
     }
 }
