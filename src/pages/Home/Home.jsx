@@ -6,7 +6,6 @@ import homeBannerImg from '../../Assets/homeBanner.png'
 
 import Banner from '../../Component/Banner/Banner.jsx'
 import Card from '../../Component/Card/Card.jsx'
-import Footer from '../../Layout/Footer/Footer.jsx'
 
 
 const Home = () => {
@@ -24,8 +23,8 @@ const Home = () => {
     <main>
       <Banner image={homeBannerImg} imageAlt={'Banniere du site'}>
         <div className={styles.text_container}>
-          <p>Chez vous,</p>
-          <p>&nbsp; partout et ailleurs</p>
+          <p>Chez vous,&nbsp;</p>
+          <p> partout et ailleurs</p>
         </div>
       </Banner>
       <div className={styles.cards_container}>
@@ -35,7 +34,7 @@ const Home = () => {
           </Link>
         ))}
       </div>
-      <Footer />
+      
     </main>
   )
 }
