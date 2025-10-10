@@ -5,30 +5,31 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 45px 0 50px 0;
-        width: 90%;
+        padding: clamp(20px, 5vw, 45px) 0 clamp(25px, 6vw, 50px) 0;
+  width: clamp(85%, 90%, 95%);
         margin: auto;
         max-width: 1240px;
     }
 
     &__logo {
-        width: 210px;
-        height: 68px;
+        width: clamp(120px, 15vw, 210px);
+  height: clamp(40px, 4.5vw, 68px);
     }
 
 
     ul {
         display: flex;
-        gap: 57px;
+        gap: clamp(20px, 5vw, 57px);
         list-style: none;
 
     }
 
     li {
         font-family: Montserrat;
-        font-size: 24px;
+        font-size: clamp(16px, 2vw, 24px);
         font-weight: 500;
         line-height: 142.6%;
+        
     }
 
     a {
@@ -44,4 +45,27 @@
 
     }
 
+}
+
+@media (max-width: 375px) {
+    .header {
+        &__container {
+            padding: 20px 20px;
+        }
+
+        &__logo {
+            width: 145px;
+            height: 47px;
+        }
+
+        ul {
+            gap: 20px;
+        }
+
+        li {
+            font-size: 12px;
+            text-transform: uppercase
+
+        }
+    }
 }
