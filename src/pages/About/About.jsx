@@ -21,7 +21,7 @@ const [dropdownText, setDropdownText] = useState([]);
     <main>
         <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'}/>  
         {dropdownText.map((dropdown, index) => (
-          <Dropdown data={dropdown} key={dropdown.id ? dropdown.id : index}> </Dropdown>
+          <Dropdown title={dropdown.title} text={dropdown.text} key={dropdown.id ?? index}/>
         ))}
 
     </main>
