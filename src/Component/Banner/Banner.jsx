@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types'
-import { useLocation } from 'react-router-dom'
 import styles from './styles.module.scss'
 
 
-const Banner = ({image, imageAlt, children}) => {
-  let url = useLocation()
+const Banner = ({image, imageAlt, overlayOpacity = 0, children}) => {
+
  
   
   return (
-    <div className={`${styles.banner} ${url.pathname === '/about' ? styles.about_banner : styles.home_banner}`}>
-
+    <div className={styles.banner} style={{ '--overlay-opacity': overlayOpacity }} >
       <img src={image} alt={imageAlt}/>
+      
+      
       {children}     
+      
     
     </div>
   )

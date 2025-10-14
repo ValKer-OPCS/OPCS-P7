@@ -19,7 +19,7 @@ const [dropdownText, setDropdownText] = useState([]);
 
   return (
     <main>
-        <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'}/>  
+        <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'} overlayOpacity={0.3} />  
         {dropdownText.map((dropdown, index) => (
           <Dropdown title={dropdown.title} text={dropdown.text} key={dropdown.id ?? index}/>
         ))}
