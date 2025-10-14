@@ -17,10 +17,10 @@ const Dropdown = ({title, text}) => {
     <div className={`${styles.dropdown} ${ url.pathname === '/about' ? styles.about_dropdown : styles.rental_dropdown }`}>
       <div className={`${styles.dropdown__title}`}>
         <p>{title}</p>
-        <i className={`fa-solid fa-chevron-up ${styles.dropdown__btn} ${open ? styles.btn_up : ''}`} onClick={toggleDropdown}></i>
+        <i className={`fa-solid fa-chevron-up ${styles.dropdown__arrow_down} ${open ? styles.arrow_up : ''}`} onClick={toggleDropdown}></i>
       </div>
 
-      <div className={`${styles.dropdown__text} ${open ? styles.down : ''}`}>
+      <div className={`${styles.dropdown__text} ${open ? styles.drop_open : ''}`}>
         <div className={styles.dropdown__content}>
           <p>{text}</p>
         </div>

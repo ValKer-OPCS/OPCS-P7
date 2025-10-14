@@ -1,7 +1,7 @@
 .dropdown {
     margin-bottom: 25px;
-    position: relative;
-    width: 100%;
+    margin: auto 20px 25px 20px;
+    position: relative;   
     max-width: 1024px;
 
     &__title {
@@ -29,10 +29,14 @@
         }
     }
 
-    &__btn {
+    &__arrow_down {
         transition: transform 0.4s ease-out;
         font-size: 1.1rem;
         cursor: pointer;
+    }
+
+    .arrow_up {
+        transform: rotate(-180deg);
     }
 
     &__text {
@@ -43,14 +47,9 @@
         max-height: 30px;
         overflow: hidden;
         transition: max-height 0.7s ease, min-height 0.7s ease;
-  box-sizing: border-box;
+        box-sizing: border-box;
 
-        ul {
-            margin: 0;
-        }
-
-        p,
-        li {
+        p {
             margin: 0;
             font-weight: 400;
             line-height: 1.5rem;
@@ -60,23 +59,18 @@
     &__content {
         padding: 45px 10px 20px 10px;
 
-
         p {
-
             font-family: Montserrat;
             font-size: 18px;
             font-weight: 400;
             line-height: 142.6%;
-            /* 25.668px */
         }
     }
 }
 
-.btn_up {
-    transform: rotate(-180deg);
-}
 
-.down {
+
+.drop_open {
     max-height: 500px;
     margin-top: -30px;
 }
@@ -87,6 +81,20 @@
         p,
         li {
             font-size: clamp(0.8rem, 0.425rem + 1.2vw, 1.1rem);
+        }
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .dropdown {
+        max-width: 335px;
+
+        &__title {
+            p {
+                font-size: 13px;
+            }
+
         }
     }
 }
