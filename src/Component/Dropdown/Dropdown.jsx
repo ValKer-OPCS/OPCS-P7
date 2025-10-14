@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import styles from './styles.module.scss'
+import PropTypes from 'prop-types'
 
 
 const Dropdown = ({title, text}) => {
@@ -27,6 +28,11 @@ const Dropdown = ({title, text}) => {
       </div>
     </div>
   )
+}
+
+Dropdown.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
 export default Dropdown
