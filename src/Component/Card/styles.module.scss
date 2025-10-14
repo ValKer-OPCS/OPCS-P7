@@ -1,6 +1,8 @@
-    .card {
+@use '../../Styles/variables' as var; 
+ 
+ .card {
         width: clamp(335px, 53.97vw, 340px); // reste 340px jusqu'à 630px
-  height: clamp(255px, 53.97vw, 340px);
+        height: clamp(255px, 53.97vw, 340px);
         margin: 0;
         position: relative;
         border-radius: 10px;
@@ -13,8 +15,8 @@
         }
 
         figcaption {
-            color: #FFF;
-            font-family: Montserrat;
+            color: var.$primary-text-color;
+            font-family: var.$primary-font;
             font-size: 18px;
             font-weight: 700;
             line-height: 142.6%;
