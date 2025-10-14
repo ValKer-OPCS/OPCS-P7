@@ -1,0 +1,72 @@
+.error {
+    text-align: center;
+
+    h1,
+    p {
+        font-family: Montserrat;
+        color: #ff6060;
+    }
+
+    h1 {
+        font-size: clamp(96px, 20vw, 288px);
+        font-weight: 700;
+    }
+
+    p {
+        font-size: clamp(18px, 2.5vw, 36px); 
+        font-weight: 500;
+        line-height: 142.6%;
+
+    }
+
+    a {
+        font-family: Montserrat;
+        text-decoration: underline;
+        color: #000;
+    }
+}
+
+.message {
+    text-align: center;
+    margin: 140px 0;
+
+    &__link {
+        margin-bottom: 140px;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .error {
+
+        h1 {
+            font-size: 96px;
+        }
+
+        p {
+            width: 260px;
+            margin-top: 113px;
+            font-size: 18px;
+
+
+        }
+
+        a {
+            font-size: 14px;
+            line-height: 142.6%;
+
+        }
+    }
+
+    .message {
+        text-align: center;
+        margin: 140px 0;
+
+        &__link {
+            margin-bottom: 140px;
+        }
+    }
+
+
+
+}
