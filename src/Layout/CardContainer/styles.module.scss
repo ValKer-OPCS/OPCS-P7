@@ -38,13 +38,6 @@
     }
 }
 
-@media (max-width: 440px) {
-    .cards_container {
-        margin: 0 clamp(0px, 1vw, 20px);
-        ;
-    }
-}
-
 
 @media (max-width: 375px) {
     .cards_container {
