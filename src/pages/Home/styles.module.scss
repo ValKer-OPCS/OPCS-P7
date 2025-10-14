@@ -7,55 +7,88 @@
   row-gap: clamp(20px, 3.5vw, 50px);
 
   background-color: #f6f6f6;
-   margin: 0 clamp(0px, 7vw, 100px);
+  margin: 0 clamp(0px, 7vw, 100px);
   padding: clamp(30px, 4vw, 56px) clamp(20px, 3.5vw, 50px) clamp(20px, 3vw, 43px) clamp(20px, 3.5vw, 50px);
-  
+
   border-radius: 25px;
 }
 
 
 .text_container {
-    display: flex;
-    position: absolute;
-    top: clamp(30px, 5.5vw, 78px);
-    left: clamp(16px, 19vw, 273px);
+  display: flex;
+  position: absolute;
+  top: clamp(30px, 5.5vw, 78px);
+  left: clamp(16px, 19vw, 273px);
 
-    p {
-      color: #FFF;
-      text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
-      font-family: Montserrat;
-      font-size: clamp(24px, 3.3vw, 48px);
-      font-weight: 700;
-      line-height: 142.6%;
-    }
-
+  p {
+    color: #FFF;
+    text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+    font-family: Montserrat;
+    font-size: clamp(24px, 3.3vw, 48px);
+    font-weight: 700;
+    line-height: 142.6%;
   }
-@media (max-width: 440px){
+
+}
+
+.loading_container {
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff6060;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 100px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 440px) {
   .cards_container {
-      margin: 0 clamp(0px, 1vw, 20px);;
-    }
+    margin: 0 clamp(0px, 1vw, 20px);
+    ;
+  }
 }
 
 
-  @media (max-width: 375px) {
-    .cards_container {
-      /* width: 100%; */
-      margin: 0;
-      padding: 20px;
-      gap: 20px;
-    }
+@media (max-width: 375px) {
+  .cards_container {
+    /* width: 100%; */
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+  }
 
-    .text_container {
-      width: 100%;
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 0;
-      top: 20px;
-      left: 16px;
+  .text_container {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+    top: 20px;
+    left: 16px;
 
-      p {
-        font-size: 24px;
-        text-shadow: none;
-      }
+    p {
+      font-size: 24px;
+      text-shadow: none;
     }
   }
+
+
+  .loading_container {
+
+  width: 90%;
+}
+}
+
