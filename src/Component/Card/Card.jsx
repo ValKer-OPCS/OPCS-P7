@@ -1,25 +1,21 @@
-
 import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 
-const Card = ({ rental }) => {
+const Card = ({ cover, title }) => {
     return (
         
             <figure className={styles.card}>
-                <img src={rental.cover} alt={rental.title} />
-                <figcaption>{rental.title}</figcaption>
+                <img src={cover} alt={title} />
+                <figcaption>{title}</figcaption>
             </figure>
         
     )
 }
 
 Card.propTypes = {
-  rental: PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    title: PropTypes.string.isRequired,
-    cover: PropTypes.string.isRequired,
-  }).isRequired,
-}
+  cover: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 
 export default Card

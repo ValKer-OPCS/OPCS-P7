@@ -25,8 +25,10 @@ const CardContainer = () => {
     <div className={`${styles.cards_container} ${loading && styles.loading_container}`}> {loading ? (<div className={styles.loader}></div>) :
 
       (rentals.map((rental, index) => (
-        <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index} >
-          <Card rental={rental} />
+        <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index}>
+
+          <Card cover={rental.cover} title={rental.title} />
+          
         </Link>
       ))
       )}
