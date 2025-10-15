@@ -4,6 +4,7 @@ import Footer from './Layout/Footer/Footer.jsx'
 import Home from './Pages/Home/Home.jsx'
 import About from './Pages/About/About.jsx'
 import Error from './Pages/Error/Error.jsx'
+import Rental from './Pages/Rental/Rental.jsx'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />        
-        {/* <Route path="/rental/:id" element={<Rental />} />  */}
+        <Route path="/rental/:id" element={<Rental />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
