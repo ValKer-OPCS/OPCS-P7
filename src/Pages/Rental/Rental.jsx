@@ -13,7 +13,7 @@ const Rental = () => {
 
   useEffect(() => {
     if (!rental) {
-      fetch("/logements.json")
+      fetch("/rentals.json")
         .then((res) => res.json())
         .then((data) => {
           const found = data.find((item) => item.id === id);

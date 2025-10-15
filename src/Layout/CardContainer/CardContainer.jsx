@@ -12,7 +12,7 @@ const CardContainer = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/logements.json')
+    fetch('/rentals.json')
       .then((response) => response.json())
       .then((data) => setRentals(data))
       .catch((error) => console.error(error))
@@ -24,9 +24,7 @@ const CardContainer = () => {
 
   return (
     <div className={`${styles.cards_container} ${loading && styles.loading_container}`}>
-      {loading ? (
-        <Loader />
-      ) :
+      {loading ? ( <Loader /> ) :
 
       (rentals.map((rental, index) => (
         <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index} state={{ rental }} >
