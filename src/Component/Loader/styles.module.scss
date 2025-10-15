@@ -1,0 +1,18 @@
+@use '../../Styles/variables' as var;
+
+
+.loader {
+    border: 6px solid var.$background-color;
+    border-top: 6px solid var.$primary-color;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 100px auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

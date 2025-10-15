@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles.module.scss'
+import Loader from '../../Component/Loader/Loader.jsx'; 
 
 import Card from '../../Component/Card/Card.jsx'
 
@@ -22,10 +23,13 @@ const CardContainer = () => {
 
 
   return (
-    <div className={`${styles.cards_container} ${loading && styles.loading_container}`}> {loading ? (<div className={styles.loader}></div>) :
+    <div className={`${styles.cards_container} ${loading && styles.loading_container}`}>
+      {loading ? (
+        <Loader />
+      ) :
 
       (rentals.map((rental, index) => (
-        <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index}>
+        <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index} state={{ rental }} >
 
           <Card cover={rental.cover} title={rental.title} />
           
