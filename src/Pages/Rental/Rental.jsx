@@ -1,8 +1,8 @@
 /* import styles from './styles.module.scss' */
 import Slideshow from '../../Component/Slideshow/Slideshow.jsx'
-import { useParams , useLocation , useNavigate  } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Loader from '../../Component/Loader/Loader.jsx';
+import Loader from '../../Layout/Loader/Loader.jsx';
 
 
 
@@ -20,7 +20,8 @@ const Rental = () => {
           const found = data.find((item) => item.id === id);
           if (!found) {
             navigate("/Error", { replace: true });
-            return;}
+            return;
+          }
           setRental(found);
         })
         .catch((err) => console.error(err));
