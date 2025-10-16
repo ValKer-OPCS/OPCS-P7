@@ -4,6 +4,7 @@ import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loader from '../../Layout/Loader/Loader.jsx';
 import Tags from '../../Component/Tags/Tags.jsx';
+import Dropdown from '../../Component/Dropdown/Dropdown.jsx'
 
 
 
@@ -44,7 +45,10 @@ const Rental = () => {
 
       <Tags data={rental.tags} />
 
-    
+      <div className= {styles.dropdown_container} >        
+      <Dropdown title='Description' text={rental.description} styleVariant="rental"/>
+      <Dropdown title='Equipements' text={rental.equipments} styleVariant="rental"/>
+      </div>
 
       
     </div>

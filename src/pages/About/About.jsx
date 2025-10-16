@@ -47,7 +47,7 @@ const About = () => {
     <main>
         <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'} overlayOpacity={0.3} />  
         {dropdownData.map((dropdown, index) => (
-          <Dropdown title={dropdown.title} text={dropdown.text} key={dropdown.id ?? index}/>
+          <Dropdown title={dropdown.title} text={dropdown.text} key={dropdown.id ?? index} styleVariant="about" />
         ))}
 
     </main>
