@@ -2,7 +2,6 @@ import aboutBannerImg from '../../Assets/aboutBanner.png'
 import Banner from '../../Component/Banner/Banner.jsx'
 import Dropdown from '../../Component/Dropdown/Dropdown.jsx'
 /* import styles from './styles.module.scss' */
-/* import { useState, useEffect } from 'react' */
 
 
 const dropdownData = [
@@ -33,15 +32,6 @@ const dropdownData = [
 
 const About = () => {
 
-
-/* const [dropdownText, setDropdownText] = useState([]);
-
-  useEffect(() => {
-    fetch('/about.json')
-      .then((response) => response.json())
-      .then((data) => setDropdownText(data))
-      .catch((error) => console.error(error));
-  }, []); */
 
   return (
     <main>
