@@ -1,4 +1,4 @@
-/* import styles from './styles.module.scss' */
+import styles from './styles.module.scss'
 import Slideshow from '../../Component/Slideshow/Slideshow.jsx'
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -35,7 +35,16 @@ const Rental = () => {
   return (
     <div>
       <Slideshow pictures={rental.pictures} title={rental.title} />
+
+      <div className={styles.title_container} >
+        <h2>{rental.title}</h2>
+        <p> {rental.location} </p>
+      </div>
+
+    
     </div>
+
+
   );
 }
 
