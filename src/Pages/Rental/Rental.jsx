@@ -3,6 +3,7 @@ import Slideshow from '../../Component/Slideshow/Slideshow.jsx'
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loader from '../../Layout/Loader/Loader.jsx';
+import Tags from '../../Component/Tags/Tags.jsx';
 
 
 
@@ -41,7 +42,11 @@ const Rental = () => {
         <p> {rental.location} </p>
       </div>
 
+      <Tags data={rental.tags} />
+
     
+
+      
     </div>
 
 
