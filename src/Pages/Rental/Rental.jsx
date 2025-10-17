@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Loader from '../../Layout/Loader/Loader.jsx';
 import Tags from '../../Component/Tags/Tags.jsx';
 import Dropdown from '../../Component/Dropdown/Dropdown.jsx'
+import Card from '../../Component/Card/Card.jsx'
 
 
 
@@ -34,14 +35,21 @@ const Rental = () => {
     return <Loader />;
   }
 
+  const { host } = rental;
+
   return (
     <div>
       <Slideshow pictures={rental.pictures} title={rental.title} />
 
+      <div className={styles.title_host}>
       <div className={styles.title_container} >
         <h2>{rental.title}</h2>
         <p> {rental.location} </p>
       </div>
+    
+      <Card cover={host.picture} title={host.name} type='host_card' />
+      </div>
+      
 
       <Tags data={rental.tags} />
 
@@ -49,6 +57,7 @@ const Rental = () => {
       <Dropdown title='Description' text={rental.description} styleVariant="rental"/>
       <Dropdown title='Equipements' text={rental.equipments} styleVariant="rental"/>
       </div>
+      
 
       
     </div>

@@ -29,7 +29,7 @@ const CardContainer = () => {
         (rentals.map((rental, index) => (
           <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index} state={{ rental }} >
 
-            <Card cover={rental.cover} title={rental.title} />
+            <Card cover={rental.cover} title={rental.title} type='home_card' />
 
           </Link>
         ))
