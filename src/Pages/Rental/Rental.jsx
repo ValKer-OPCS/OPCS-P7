@@ -40,7 +40,7 @@ const Rental = () => {
 
   return (
     <div>
-      <Slideshow pictures={rental.pictures} title={rental.title} />
+      <Slideshow pictures={rental.pictures} title={rental.title} fadeDuration="100" />
 
       <div className={styles.title_host}>
         <div className={styles.title_container} >
