@@ -1,6 +1,5 @@
 import { useState } from "react";
-import LeftArrow from "../../Assets/arrowLeft.svg";
-import RightArrow from "../../Assets/arrowRight.svg";
+import Arrow from "../Arrow/Arrow.jsx";
 import styles from "./styles.module.scss";
 
 const Slideshow = ({ pictures, title }) => {
@@ -28,10 +27,10 @@ const Slideshow = ({ pictures, title }) => {
             {hasMultipleImages && (
                 <>
                     <span onClick={showPreviousImage} className={styles.arrowLeft}>
-                        <img src={LeftArrow} alt="Précédent" />
+                        <Arrow rotation='0' />
                     </span>
                     <span onClick={showNextImage} className={styles.arrowRight}>
-                        <img src={RightArrow} alt="Suivant" />
+                        <Arrow rotation='180' />
                     </span>
 
                     <p className={styles.counter}>
