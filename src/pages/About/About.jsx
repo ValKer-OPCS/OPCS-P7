@@ -31,14 +31,15 @@ const dropdownData = [
 
 
 const About = () => {
-
-
   return (
     <main>
-        <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'} overlayOpacity={0.3} />  
-        {dropdownData.map((dropdown, index) => (
-          <Dropdown title={dropdown.title} text={dropdown.text} key={dropdown.id ?? index} styleVariant="about" />
-        ))}
+      <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'} overlayOpacity={0.3} />  
+
+      {dropdownData.map((dropdown, index) => (
+        <Dropdown key={dropdown.id ?? index} title={dropdown.title} styleVariant="about">
+          <p>{dropdown.text}</p>
+        </Dropdown>
+      ))}
 
     </main>
   )
