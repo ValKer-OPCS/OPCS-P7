@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles.module.scss'
+import Loader from '../Loader/Loader.jsx'
 
 import Card from '../../Component/Card/Card.jsx'
 
@@ -11,7 +12,7 @@ const CardContainer = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/logements.json')
+    fetch('/rentals.json')
       .then((response) => response.json())
       .then((data) => setRentals(data))
       .catch((error) => console.error(error))
@@ -22,16 +23,17 @@ const CardContainer = () => {
 
 
   return (
-    <div className={`${styles.cards_container} ${loading && styles.loading_container}`}> {loading ? (<div className={styles.loader}></div>) :
+    <div className={`${styles.cards_container} ${loading && styles.loading_container}`}>
+      {loading ? (<Loader />) :
 
-      (rentals.map((rental, index) => (
-        <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index}>
+        (rentals.map((rental, index) => (
+          <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index} state={{ rental }} >
 
-          <Card cover={rental.cover} title={rental.title} />
-          
-        </Link>
-      ))
-      )}
+            <Card cover={rental.cover} title={rental.title} type='home_card' />
+
+          </Link>
+        ))
+        )}
     </div>
   )
 };

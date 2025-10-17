@@ -1,39 +1,83 @@
-@use '../../Styles/variables' as var; 
- 
- .card {
-        width: clamp(335px, 53.97vw, 340px); // reste 340px jusqu'à 630px
-        height: clamp(255px, 53.97vw, 340px);
-        margin: 0;
-        position: relative;
-        border-radius: 10px;
-        overflow: hidden;
+@use '../../Styles/variables' as var;
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+.home_card {
+    width: clamp(335px, 53.97vw, 340px);
+    height: clamp(255px, 53.97vw, 340px);
+    margin: 0;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
 
-        figcaption {
-            color: var.$primary-text-color;
-            font-family: var.$primary-font;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 142.6%;
+    
+    
 
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            align-items: flex-end;
-            padding: 20px;
-
-        }
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%,  rgba(0, 0, 0, 0.50) 100%);
+        pointer-events: none;
+        z-index: 1;
     }
 
-    @media (max-width: 375px) {
-        .card {
-            width: 335px;
-            height: 255px;
-        }
+    figcaption {
+        color: var.$primary-text-color;
+        font-family: var.$primary-font;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 142.6%;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        z-index: 999;
+
     }
+}
+
+.host_card {
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+    width: 167px;
+    gap: 10px;
+    justify-content: center;
+
+    img {
+        border-radius: 50%;
+        order: 2;
+
+    }
+
+    figcaption {
+
+        color: #FF6060;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 142.6%;
+
+
+    }
+
+}
+
+@media (max-width: 375px) {
+    .home_card {
+        width: 335px;
+        height: 255px;
+    }
+}

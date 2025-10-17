@@ -1,30 +1,24 @@
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
-
 import styles from './styles.module.scss'
 import PropTypes from 'prop-types'
 
-
-const Dropdown = ({title, text}) => {
+const Dropdown = ({ title, children, styleVariant }) => {
   const [open, setOpen] = useState(false)
 
-  let url = useLocation()
+  const toggleDropdown = () => setOpen(!open)
 
-  function toggleDropdown() {
-    setOpen(!open)
-  }
+  const baseClass = styleVariant === 'about'? 'dropdown_about': 
+                    styleVariant === 'rental' ? 'dropdown_rental' : 'dropdown_about'
 
   return (
-    <div className={`${styles.dropdown} ${ url.pathname === '/about' ? styles.about_dropdown : styles.rental_dropdown }`}>
-      <div className={`${styles.dropdown__title}`}>
+    <div className={`${styles[baseClass]} ${open ? styles.open : ''}`}>
+      <div className={styles[`${baseClass}__title`]} onClick={toggleDropdown}>
         <p>{title}</p>
-        <i className={`fa-solid fa-chevron-up ${styles.dropdown__arrow_down} ${open ? styles.arrow_up : ''}`} onClick={toggleDropdown}></i>
+        <i className={`fa-solid fa-chevron-up ${ styles[`${baseClass}__arrow_down`] } ${open ? styles.openArrow : ''}`} ></i>
       </div>
 
-      <div className={`${styles.dropdown__text} ${open ? styles.drop_open : ''}`}>
-        <div className={styles.dropdown__content}>
-          <p>{text}</p>
-        </div>
+      <div className={styles[`${baseClass}__text`]}>
+        <div className={styles[`${baseClass}__content`]}>{children}</div>
       </div>
     </div>
   )
@@ -32,7 +26,12 @@ const Dropdown = ({title, text}) => {
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  styleVariant: PropTypes.oneOf(['about', 'rental']),
+}
+
+Dropdown.defaultProps = {
+  styleVariant: 'about',
 }
 
 export default Dropdown

@@ -1,102 +1,179 @@
 @use '../../Styles/variables' as var;
 
-.dropdown {
-    margin-bottom: 25px;
-    margin: auto 20px 25px 20px;
-    position: relative;   
-    max-width: 1024px;
+/* ----------------------------------------------------------
+   VARIANT ABOUT
+---------------------------------------------------------- */
+.dropdown_about {
+  position: relative;
+  max-width: 1024px;
+  margin: auto 20px 25px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 
-    &__title {
-        position: relative;
-        padding: 8px 10px;
-        width: 100%;
-        border-radius: 8px;
-        background-color: var.$primary-color;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
+  &__title {
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var.$primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
 
-        p {
-            font-family: var.$primary-font;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 142.6%;
-        }
-
-        i,
-        p {
-            color: white;
-        }
+    p {
+      font-family: var.$primary-font;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 142.6%;
+      color: white;
+      margin: 0;
     }
 
-    &__arrow_down {
-        transition: transform 0.4s ease-out;
-        font-size: 1.1rem;
-        cursor: pointer;
+    i {
+      color: #FFF;
+      font-size: 1.1rem;
+      transition: transform 0.4s ease-out;
+    }
+  }
+
+  &__arrow_down {
+    transition: transform 0.4s ease-out;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  &__text {
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.7s ease;
+    box-sizing: border-box;
+  }
+
+  &__content {
+    padding: 20px 10px;
+    box-sizing: border-box;
+
+    p,
+    li {
+      margin: 0;
+      font-weight: 400;
+      line-height: 1.5rem;
+      font-size: clamp(0.8rem, 0.425rem + 1.2vw, 1.1rem);
     }
 
-    .arrow_up {
-        transform: rotate(-180deg);
+    p {
+      font-family: var.$primary-font;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 142.6%;
+      margin: 0;
+    }
+  }
+}
+
+/* ----------------------------------------------------------
+   VARIANT RENTAL
+---------------------------------------------------------- */
+.dropdown_rental {
+  position: relative;
+  width: 582px;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__title {
+    padding: 8px 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #FF6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    p {
+      color: #FFF;
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 142.6%;
+      margin: 0;
     }
 
-    &__text {
-        background-color: #f6f6f6;
-        width: 100%;
-        border-radius: 0 0 10px 10px;
-        margin-top: -30px;
-        max-height: 30px;
-        overflow: hidden;
-        transition: max-height 0.7s ease, min-height 0.7s ease;
-        box-sizing: border-box;
+    i {
+      color: #fff;
+      font-size: 1.1rem;
+      transition: transform 0.4s ease-out;
+    }
+  }
 
-        p {
-            margin: 0;
-            font-weight: 400;
-            line-height: 1.5rem;
-        }
+  &__arrow_down {
+    transition: transform 0.4s ease-out;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  &__text {
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.7s ease;
+    box-sizing: border-box;
+  }
+
+  &__content {
+    padding: 20px 10px;
+    box-sizing: border-box;
+
+    p,
+    li {
+      margin: 0;
+      font-weight: 400;
+      line-height: 1.5rem;
+      font-size: 16px;
     }
 
-    &__content {
-        padding: 45px 10px 20px 10px;
-
-        p {
-            font-family: var.$primary-font;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 142.6%;
-        }
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 142.6%;
+      margin: 0;
     }
+  }
 }
 
 
-
-.drop_open {
-    max-height: 500px;
-    margin-top: -30px;
+.dropdown_about.open .dropdown_about__text,
+.dropdown_rental.open .dropdown_rental__text {
+  max-height: 500px; 
 }
 
-.about_dropdown {
-    .dropdown__text {
-
-        p,
-        li {
-            font-size: clamp(0.8rem, 0.425rem + 1.2vw, 1.1rem);
-        }
-    }
+.openArrow {
+  transform: rotate(-180deg);
+  transition: transform 0.4s ease-out;
 }
 
 
 @media screen and (max-width: 375px) {
-    .dropdown {
-        max-width: 335px;
+  .dropdown_about {
+    max-width: 335px;
 
-        &__title {
-            p {
-                font-size: 13px;
-            }
-
-        }
+    &__title p {
+      font-size: 13px;
     }
+  }
+
+  .dropdown_rental {
+    width: 100%;
+  }
 }
