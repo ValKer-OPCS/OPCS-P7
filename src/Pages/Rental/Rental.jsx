@@ -43,29 +43,39 @@ const Rental = () => {
       <Slideshow pictures={rental.pictures} title={rental.title} />
 
       <div className={styles.title_host}>
-      <div className={styles.title_container} >
-        <h2>{rental.title}</h2>
-        <p> {rental.location} </p>
+        <div className={styles.title_container} >
+          <h2>{rental.title}</h2>
+          <p> {rental.location} </p>
+        </div>
+
+        <Card cover={host.picture} title={host.name} type='host_card' />
       </div>
-    
-      <Card cover={host.picture} title={host.name} type='host_card' />
-      </div>
-      
+
       <div className={styles.tags_rating} >
-      <Tags data={rental.tags} />
-      <Rating rating={rental.rating} icon = "fa-solid fa-star" maxRating = {5} fillColor = "#FF6060" emptyColor = "#E3E3E3"/>
+        <Tags data={rental.tags} />
+        <Rating rating={rental.rating} icon="fa-solid fa-star" maxRating={5} fillColor="#FF6060" emptyColor="#E3E3E3" />
 
 
       </div>
-      
 
-      <div className= {styles.dropdown_container} >        
-      <Dropdown title='Description' text={rental.description} styleVariant="rental"/>
-      <Dropdown title='Equipements' text={rental.equipments} styleVariant="rental"/>
+
+      <div className={styles.dropdown_container} >
+        <Dropdown title="Description" styleVariant="rental">
+          <p>
+            {rental.description}
+          </p>
+        </Dropdown>
+        <Dropdown title="Équipements" styleVariant="rental">
+          <ul>
+            {rental.equipments.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </Dropdown>
       </div>
-      
 
-      
+
+
     </div>
 
 
