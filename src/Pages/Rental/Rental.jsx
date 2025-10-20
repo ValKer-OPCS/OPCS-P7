@@ -1,4 +1,5 @@
 import styles from './styles.module.scss'
+import rentalStyles from '../../Component/Dropdown/DropdownRental.module.scss'
 import Slideshow from '../../Component/Slideshow/Slideshow.jsx'
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -60,12 +61,12 @@ const Rental = () => {
 
 
       <div className={styles.dropdown_container} >
-        <Dropdown title="Description" styleVariant="rental">
+        <Dropdown title="Description" styles={rentalStyles}>
           <p>
             {rental.description}
           </p>
         </Dropdown>
-        <Dropdown title="Équipements" styleVariant="rental">
+        <Dropdown title="Équipements" styles={rentalStyles}>
           <ul>
             {rental.equipments.map((item, index) => (
               <li key={index}>{item}</li>
