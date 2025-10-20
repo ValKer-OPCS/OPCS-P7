@@ -63,9 +63,9 @@
 
     figcaption {
 
-        color: #FF6060;
+        color: var.$primary-color;
         text-align: right;
-        font-family: Montserrat;
+        font-family: var.$primary-font;
         font-size: 18px;
         font-weight: 500;
         line-height: 142.6%;

@@ -1,3 +1,5 @@
+@use '../../Styles/variables' as var;
+
 .slideshow {
     position: relative;
     max-height: 415px;
@@ -49,7 +51,6 @@
     top: 150px;
     cursor: pointer;
     z-index: 10;
-    color: white;
 
     img {
         font-size: 80px;
@@ -70,9 +71,9 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    color: #fff;
+    color: var.$primary-text-color ;
     text-align: center;
-    font-family: Montserrat, sans-serif;
+    font-family: var.$primary-font;
     font-size: 18px;
     font-weight: 500;
     line-height: 142.6%;

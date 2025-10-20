@@ -24,12 +24,12 @@
       font-size: 24px;
       font-weight: 700;
       line-height: 142.6%;
-      color: white;
+      color: var.$primary-text-color;
       margin: 0;
     }
 
     i {
-      color: #FFF;
+      color: var.$primary-text-color;
       font-size: 1.1rem;
       transition: transform 0.4s ease-out;
     }
@@ -43,7 +43,7 @@
 
   &__text {
     width: 100%;
-    background-color: #f6f6f6;
+    background-color: var.$background-color;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
     max-height: 0;
