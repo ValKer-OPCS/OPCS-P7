@@ -1,4 +1,14 @@
+import PropTypes from 'prop-types';
 
+
+/**
+ * Arrow component renders an SVG arrow icon.
+ *
+ * @component
+ * @param {Object} props - The component properties.
+ * @param {number} [props.rotation=0] - The rotation angle (in degrees) applied to the SVG icon.
+ * @returns {JSX.Element} The SVG arrow element with applied rotation.
+ */
 const Arrow = ({ rotation = 0 }) => {
 
     return (
@@ -12,6 +22,10 @@ const Arrow = ({ rotation = 0 }) => {
 
         </>
     )
+};
+
+Arrow.propTypes = {
+    rotation: PropTypes.number,
 };
 
 export default Arrow

@@ -1,7 +1,19 @@
 import { useState } from "react";
 import Arrow from "../Arrow/Arrow.jsx";
 import styles from "./styles.module.scss";
+import PropTypes from "prop-types";
 
+
+/**
+ * Slideshow component displays a series of images with a fade transition effect.
+ *
+ * @component
+ * @param {Object} props - The props object.
+ * @param {string[]} props.pictures - An array of image URLs to be displayed.
+ * @param {string} props.title - The title used for the image alt attribute.
+ * @param {number} [props.fadeDuration=500] - The duration in milliseconds for the fade transition.
+ * @returns {JSX.Element} The rendered slideshow component.
+ */
 const Slideshow = ({ pictures, title, fadeDuration = 500 }) => {
     const [currentImage, setCurrentImage] = useState(0);
     const [nextImage, setNextImage] = useState(null);
@@ -51,6 +63,16 @@ const Slideshow = ({ pictures, title, fadeDuration = 500 }) => {
             )}
         </div>
     );
+};
+
+Slideshow.propTypes = {
+    pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+    title: PropTypes.string.isRequired,
+    fadeDuration: PropTypes.number,
+};
+
+Slideshow.defaultProps = {
+    fadeDuration: 500,
 };
 
 export default Slideshow;
