@@ -12,14 +12,12 @@ const CardContainer = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/rentals.json')
-      .then((response) => response.json())
-      .then((data) => setRentals(data))
-      .catch((error) => console.error(error))
-      .finally(() => {
-        setTimeout(() => setLoading(false), 500)
-      })
-  }, [])
+  fetch('/rentals.json')
+    .then((response) => response.json())
+    .then((data) => setRentals(data))
+    .catch((error) => console.error(error))
+    .finally(() => setLoading(false))
+}, [])
 
 
   return (
