@@ -40,44 +40,48 @@ const Rental = () => {
   const { host } = rental;
 
   return (
-    <div>
-      <Slideshow pictures={rental.pictures} title={rental.title} fadeDuration="100" />
+    <main>
+      <div>
+        <Slideshow pictures={rental.pictures} title={rental.title} fadeDuration="100" />
 
-      <div className={styles.title_host}>
-        <div className={styles.title_container} >
-          <h2>{rental.title}</h2>
-          <p> {rental.location} </p>
+        <div className={styles.content}>
+          <div className={styles.title_container} >
+            <h2>{rental.title}</h2>
+            <p> {rental.location} </p>
+          </div>
+          <div className={styles.card_rating}>
+            <Card cover={host.picture} title={host.name} type='host_card' />
+            <Rating rating={rental.rating} icon="fa-solid fa-star" maxRating={5} fillColor="#FF6060" emptyColor="#E3E3E3" />
+
+          </div>
+          <div className={styles.tags_container} >
+            <Tags data={rental.tags} />
+          </div>
+
         </div>
 
-        <Card cover={host.picture} title={host.name} type='host_card' />
+
+
+
+        <div className={styles.dropdown_container} >
+          <Dropdown title="Description" styles={rentalStyles}>
+            <p>
+              {rental.description}
+            </p>
+          </Dropdown>
+          <Dropdown title="Équipements" styles={rentalStyles}>
+            <ul>
+              {rental.equipments.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </Dropdown>
+        </div>
+
+
+
       </div>
-
-      <div className={styles.tags_rating} >
-        <Tags data={rental.tags} />
-        <Rating rating={rental.rating} icon="fa-solid fa-star" maxRating={5} fillColor="#FF6060" emptyColor="#E3E3E3" />
-
-
-      </div>
-
-
-      <div className={styles.dropdown_container} >
-        <Dropdown title="Description" styles={rentalStyles}>
-          <p>
-            {rental.description}
-          </p>
-        </Dropdown>
-        <Dropdown title="Équipements" styles={rentalStyles}>
-          <ul>
-            {rental.equipments.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </Dropdown>
-      </div>
-
-
-
-    </div>
+    </main>
 
 
   );

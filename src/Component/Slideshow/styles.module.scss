@@ -79,3 +79,33 @@
     line-height: 142.6%;
     margin-top: 10px;
 }
+
+@media screen and (max-width: 375px) {
+    .slideshow {
+        width: 335px;
+        height: 225px;
+    }
+
+    .imageWrapper {
+        height: 100%;
+        width: 100%;
+    }
+
+    .arrowLeft{
+        top: 45%;
+        left: 5.86px;
+
+    }
+    .arrowRight {
+        top: 45%;
+        right: 5.86px;
+    }
+    svg{
+        height: 24px;
+        width: 24px;
+    }
+
+    .counter {
+        display: none;
+    }
+}
