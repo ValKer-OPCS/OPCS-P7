@@ -12,7 +12,7 @@ import PropTypes from 'prop-types'
  */
 const Tags = ({ data }) => {
   return (
-    <div className={styles.tags_container} >
+    <div className={styles.tags} >
         {data.map((tag, index) => (
           <p key={index}>{tag}</p>
         ))}
