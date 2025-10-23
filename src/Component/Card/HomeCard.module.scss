@@ -1,6 +1,6 @@
 @use '../../Styles/variables' as var;
 
-.home_card {
+.card {
     width: clamp(335px, 53.97vw, 340px);
     height: clamp(255px, 53.97vw, 340px);
     margin: 0;
@@ -48,59 +48,12 @@
     }
 }
 
-.host_card {
-    display: flex;
-    flex-direction: row;
-    height: 64px;
-    width: 167px;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
 
-    img {
-        border-radius: 50%;
-        order: 2;
-        height: 64px;
-        width: 64px;
-
-    }
-
-    figcaption {
-
-        color: var.$primary-color;
-        text-align: right;
-        font-family: var.$primary-font;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 142.6%;
-
-
-    }
-
-}
-
-@media (max-width: 375px) {
-    .home_card {
+@media (max-width: 376px) {
+    .card {
         width: 335px;
         height: 255px;
     }
 
-    .host_card {
-        order: 2;
-        width: 100px;
-        height: 32px;
 
-        img {
-            border-radius: 50%;
-            order: 2;
-            height: 32px;
-            width: 32px;
-
-            
-        }
-        figcaption {
-                font-size: 12px;
-
-            }
-    }
 }

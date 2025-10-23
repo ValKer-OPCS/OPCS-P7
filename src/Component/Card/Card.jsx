@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import styles from './styles.module.scss'
 
 
 /**
@@ -12,12 +11,12 @@ import styles from './styles.module.scss'
  * @param {string} props.type - The style type used to assign a specific class to the figure element.
  * @returns {JSX.Element} A card element consisting of an image and its corresponding title.
  */
-const Card = ({ cover, title, type }) => {
+const Card = ({ cover, title, styles }) => {
 
 
   return (
 
-    <figure className={styles[type]}>
+    <figure className={styles.card}>
       <img src={cover} alt={title} />
       <figcaption>{title}</figcaption>
     </figure>
