@@ -5,11 +5,12 @@ import PropTypes from 'prop-types'
  * Card component that displays an image with a title.
  *
  * @component
- * @param {Object} props - Component properties.
- * @param {string} props.cover - The source URL of the image to be displayed.
- * @param {string} props.title - The title of the card.
- * @param {string} props.type - The style type used to assign a specific class to the figure element.
- * @returns {JSX.Element} A card element consisting of an image and its corresponding title.
+ * @param {Object} props - The properties object.
+ * @param {string} props.cover - Source URL for the image cover. Must be a valid image URL.
+ * @param {string} props.title - Title displayed as the card's caption.
+ * @param {Object} props.styles - Object containing the style definitions (e.g., a CSS modules object) for the card.
+ *
+ * @returns {JSX.Element} A rendered Card component.
  */
 const Card = ({ cover, title, styles }) => {
 
