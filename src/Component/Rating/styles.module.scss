@@ -1,7 +1,7 @@
 .rating {
     display: flex;
-    font-size: 23px;
-    gap: 15px;
+    gap: clamp(8px, 1.2vw, 15px);
+    font-size: clamp(14px, 1.6vw, 23px);
 }
 
 .starEmpty {
@@ -9,14 +9,14 @@
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
 
-.rating {
-    display: flex;
-    font-size: 13px;
-    gap: 6px;
+    .rating {
+        display: flex;
+        font-size: 13px;
+        gap: 6px;
 
-}
+    }
 
 
 }

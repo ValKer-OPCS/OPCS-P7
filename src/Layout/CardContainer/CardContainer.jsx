@@ -1,3 +1,5 @@
+import homeCard from '../../Component/Card/HomeCard.module.scss'
+
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './styles.module.scss'
@@ -27,7 +29,7 @@ const CardContainer = () => {
         (rentals.map((rental, index) => (
           <Link to={`/rental/${rental.id}`} className={styles.link} key={rental.id ? rental.id : index} state={{ rental }} >
 
-            <Card cover={rental.cover} title={rental.title} type='home_card' />
+            <Card cover={rental.cover} title={rental.title} styles={homeCard} />
 
           </Link>
         ))

@@ -2,15 +2,17 @@
 
 .slideshow {
     position: relative;
-    max-height: 415px;
+    width: clamp(335px, 86vw, 1240px);
+    height: clamp(225px, 28.8vw, 415px);
     max-width: 1240px;
+
     margin: auto;
 }
 
 .imageWrapper {
     position: relative;
     width: 100%;
-    height: 415px;
+    height: 100%;
     overflow: hidden;
     border-radius: 25px;
 
@@ -40,6 +42,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -48,39 +51,42 @@
 .arrowLeft,
 .arrowRight {
     position: absolute;
-    top: 150px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
 
+    svg,
     img {
-        font-size: 80px;
+        width: clamp(24px, 5vw, 80px);
+        height: clamp(24px, 5vw, 80px);
     }
 }
 
 .arrowLeft {
-    left: 23px;
+    left: clamp(6px, 1.6vw, 23px);
 }
 
 .arrowRight {
-    right: 23px;
+    right: clamp(6px, 1.6vw, 23px);
 }
 
 .counter {
     position: absolute;
-    bottom: 25px;
+    bottom: clamp(10px, 1.7vw, 25px);
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    color: var.$primary-text-color ;
+    color: var.$primary-text-color;
     text-align: center;
     font-family: var.$primary-font;
-    font-size: 18px;
+    font-size: clamp(12px, 1.25vw, 18px);
     font-weight: 500;
     line-height: 142.6%;
     margin-top: 10px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
     .slideshow {
         width: 335px;
         height: 225px;
@@ -91,16 +97,17 @@
         width: 100%;
     }
 
-    .arrowLeft{
+    .arrowLeft {
         top: 45%;
         left: 5.86px;
-
     }
+
     .arrowRight {
         top: 45%;
         right: 5.86px;
     }
-    svg{
+
+    svg {
         height: 24px;
         width: 24px;
     }

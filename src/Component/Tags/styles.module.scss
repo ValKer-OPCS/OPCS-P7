@@ -1,33 +1,30 @@
 @use '../../Styles/variables' as var;
 
 .tags {
-
     display: flex;
     flex-direction: row;
-    gap: 10px;
     flex-wrap: wrap;
-    
+    gap: clamp(6px, 1vw, 10px);
+
 
 
 
     p {
-        min-width: 115px;
-        height: 25px;
-        border-radius: 10px;
+        min-width: clamp(70px, 8vw, 115px);
+        height: clamp(20px, 2vw, 25px);
+        border-radius: clamp(6px, 1vw, 10px);
         background: var.$primary-color;
         color: var.$primary-text-color;
         text-align: center;
         font-family: var.$primary-font;
-        font-size: 14px;
+        font-size: clamp(10px, 1.1vw, 14px);
         font-weight: 700;
-        line-height: 25px;
-  
-
-
+        line-height: clamp(20px, 2vw, 25px);
+        padding: 0 clamp(6px, 1vw, 10px);
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .tags {
         gap: 10px;
         margin-top: 10px;

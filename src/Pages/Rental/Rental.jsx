@@ -1,5 +1,7 @@
 import styles from './styles.module.scss'
 import rentalStyles from '../../Component/Dropdown/DropdownRental.module.scss'
+import hostCard from '../../Component/Card/HostCard.module.scss'
+
 import Slideshow from '../../Component/Slideshow/Slideshow.jsx'
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -50,7 +52,7 @@ const Rental = () => {
             <p> {rental.location} </p>
           </div>
           <div className={styles.card_rating}>
-            <Card cover={host.picture} title={host.name} type='host_card' />
+            <Card cover={host.picture} title={host.name} styles={hostCard} />
             <Rating rating={rental.rating} icon="fa-solid fa-star" maxRating={5} fillColor="#FF6060" emptyColor="#E3E3E3" />
 
           </div>
