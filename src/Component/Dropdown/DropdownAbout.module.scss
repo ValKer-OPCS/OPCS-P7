@@ -43,7 +43,7 @@
 
   &__text {
     width: 100%;
-    background-color: var.$background-color;
+    background-color: var.$primary-background-color;
     border-radius: 0 0 10px 10px;
     overflow: hidden;
     max-height: 0;
@@ -92,5 +92,13 @@
     &__title p {
       font-size: 13px;
     }
+
+    &__content {
+   
+    p {
+      font-size: 12px;
+
+    }
+  }
   }
 }
