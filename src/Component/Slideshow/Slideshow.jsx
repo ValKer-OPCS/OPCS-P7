@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Arrow from "../Arrow/Arrow.jsx";
 import styles from "./styles.module.scss";
 import PropTypes from "prop-types";
@@ -37,6 +37,13 @@ const Slideshow = ({ pictures, title, fadeDuration = 500 }) => {
     };
 
     const hasMultipleImages = pictures.length > 1;
+
+    useEffect(() => {
+        pictures.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, [pictures]);
 
     return (
         <div className={styles.slideshow}>
