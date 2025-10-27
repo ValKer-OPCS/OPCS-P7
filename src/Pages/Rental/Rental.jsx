@@ -5,7 +5,7 @@ import hostCard from '../../Component/Card/HostCard.module.scss'
 import Slideshow from '../../Component/Slideshow/Slideshow.jsx'
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Loader from '../../Layout/Loader/Loader.jsx';
+import Loader from '../../Component/Loader/Loader.jsx'
 import Tags from '../../Component/Tags/Tags.jsx';
 import Dropdown from '../../Component/Dropdown/Dropdown.jsx'
 import Card from '../../Component/Card/Card.jsx'
