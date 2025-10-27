@@ -1,5 +1,6 @@
-import logo from '../../Assets/logoKasaWhite.png'
 import styles from './styles.module.scss'
+
+import logo from '../../Assets/logoKasaWhite.png'
 
 const Footer = () => {
     const year = new Date().getFullYear();

@@ -1,11 +1,9 @@
-
 import styles from './styles.module.scss'
 
-import homeBannerImg from '../../Assets/homeBanner.png'
-
 import Banner from '../../Component/Banner/Banner.jsx'
-
 import CardContainer from '../../Layout/CardContainer/CardContainer.jsx'
+
+import homeBannerImg from '../../Assets/homeBanner.png'
 
 
 const Home = () => {

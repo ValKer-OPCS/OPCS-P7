@@ -1,8 +1,11 @@
-import aboutBannerImg from '../../Assets/aboutBanner.png'
+import aboutDropdown from '../../Component/Dropdown/DropdownAbout.module.scss'
+
 import Banner from '../../Component/Banner/Banner.jsx'
 import Dropdown from '../../Component/Dropdown/Dropdown.jsx'
-/* import styles from './styles.module.scss' */
-import aboutStyles from '../../Component/Dropdown/DropdownAbout.module.scss'
+
+import aboutBannerImg from '../../Assets/aboutBanner.png'
+
+
 
 
 const dropdownData = [
@@ -37,7 +40,7 @@ const About = () => {
       <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'} overlayOpacity={0.3} />  
 
       {dropdownData.map((dropdown, index) => (
-        <Dropdown key={dropdown.id ?? index} title={dropdown.title} styles={aboutStyles}>
+        <Dropdown key={dropdown.id ?? index} title={dropdown.title} styles={aboutDropdown}>
           <p>{dropdown.text}</p>
         </Dropdown>
       ))}

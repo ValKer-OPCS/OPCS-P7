@@ -1,10 +1,11 @@
+import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+
 import styles from './styles.module.scss'
-import rentalStyles from '../../Component/Dropdown/DropdownRental.module.scss'
+import rentalDropdown from '../../Component/Dropdown/DropdownRental.module.scss'
 import hostCard from '../../Component/Card/HostCard.module.scss'
 
 import Slideshow from '../../Component/Slideshow/Slideshow.jsx'
-import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Loader from '../../Component/Loader/Loader.jsx'
 import Tags from '../../Component/Tags/Tags.jsx';
 import Dropdown from '../../Component/Dropdown/Dropdown.jsx'
@@ -66,12 +67,12 @@ const Rental = () => {
 
 
         <div className={styles.dropdown_container} >
-          <Dropdown title="Description" styles={rentalStyles}>
+          <Dropdown title="Description" styles={rentalDropdown}>
             <p>
               {rental.description}
             </p>
           </Dropdown>
-          <Dropdown title="Équipements" styles={rentalStyles}>
+          <Dropdown title="Équipements" styles={rentalDropdown}>
             <ul>
               {rental.equipments.map((item, index) => (
                 <li key={index}>{item}</li>

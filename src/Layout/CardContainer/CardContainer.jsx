@@ -1,10 +1,10 @@
-import homeCard from '../../Component/Card/HomeCard.module.scss'
-
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import styles from './styles.module.scss'
-import Loader from '../../Component/Loader/Loader.jsx'
 
+import styles from './styles.module.scss'
+import homeCard from '../../Component/Card/HomeCard.module.scss'
+
+import Loader from '../../Component/Loader/Loader.jsx'
 import Card from '../../Component/Card/Card.jsx'
 
 

@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
-import Arrow from "../Arrow/Arrow.jsx";
-import styles from "./styles.module.scss";
 import PropTypes from "prop-types";
+
+import styles from "./styles.module.scss";
+
+import Arrow from "../Arrow/Arrow.jsx";
+
 
 
 /**
