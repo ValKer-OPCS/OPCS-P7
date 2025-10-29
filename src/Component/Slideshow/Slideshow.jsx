@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-
 import styles from "./styles.module.scss";
-
 import Arrow from "../Arrow/Arrow.jsx";
-
-
-
 /**
  * Slideshow component displays a series of images with a fade transition effect.
  *
@@ -79,10 +74,6 @@ Slideshow.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
     title: PropTypes.string.isRequired,
     fadeDuration: PropTypes.number,
-};
-
-Slideshow.defaultProps = {
-    fadeDuration: 500,
 };
 
 export default Slideshow;
