@@ -1,15 +1,12 @@
 import aboutDropdown from '../../Component/Dropdown/DropdownAbout.module.scss'
-
 import Banner from '../../Component/Banner/Banner.jsx'
 import Dropdown from '../../Component/Dropdown/Dropdown.jsx'
-
 import aboutBannerImg from '../../Assets/aboutBanner.png'
 
 
+const About = () => {
 
-
-const dropdownData = [
-
+	const dropdownData = [
 {
 		"id": "1",
 		"title": "Fiabilité",
@@ -30,11 +27,8 @@ const dropdownData = [
 		"title": "Sécurité",
 		"text": "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
 }
-
 ]
 
-
-const About = () => {
   return (
     <main>
       <Banner image={aboutBannerImg} imageAlt={'Banniere de la page A Propos'} overlayOpacity={0.3} />  
@@ -44,7 +38,6 @@ const About = () => {
           <p>{dropdown.text}</p>
         </Dropdown>
       ))}
-
     </main>
   )
 };
