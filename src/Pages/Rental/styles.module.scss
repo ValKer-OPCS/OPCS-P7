@@ -1,5 +1,8 @@
 @use '../../Styles/variables' as var;
 
+.rental_container{
+    margin-bottom: 40px;
+}
 .content {
     padding-top: clamp(20px, 2vw, 30px);
     min-height: clamp(100px, 10vw, 146px);
@@ -76,6 +79,9 @@ li {
 }
 
 @media (max-width: 376px) {
+.rental_container{
+    margin-bottom: 0px;
+}
 
     .content {
 
